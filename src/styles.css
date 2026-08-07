@@ -1,0 +1,39 @@
+body {
+	background-color: saddlebrown;
+}
+
+header {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	width: 500px;
+}
+
+nav button {
+	padding: 1rem 1.2rem 1rem 1.2rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+	background-color: burlywood;
+	border: none;
+	border-radius: 7px;
+}
+
+#content {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#menu-div,
+#home-div,
+#about-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
