@@ -1,5 +1,6 @@
 // index.js
 
+import "./styles.css";
 import { Home } from "./content.js"
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
@@ -42,6 +43,7 @@ class Restaurant {
 
 const resto = new Restaurant();
 resto.initListeners();
+Home();
 
 
 
