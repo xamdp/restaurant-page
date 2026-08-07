@@ -1,3 +1,47 @@
 // index.js
 
-console.log("hello")
+import { Home } from "./content.js"
+import { Menu } from "./menu.js";
+import { About } from "./about.js";
+
+// i need to create event listeners here that will listen for clicked buttons.
+
+class Restaurant {
+	constructor() {
+		this.contentDiv = document.querySelector("#content");
+		this.homeBtn = document.querySelector("#home-btn");
+		this.menuBtn = document.querySelector("#menu-btn");
+		this.aboutBtn = document.querySelector("#about-btn");
+	}
+
+
+	initListeners() {
+		this.homeBtn.addEventListener('click', this.loadThisPage);
+		this.menuBtn.addEventListener('click', this.loadThisPage);
+		this.aboutBtn.addEventListener('click', this.loadThisPage);
+	}
+
+
+	loadThisPage = (event) => {
+		let id = event.target.id;
+		if (id === "home-btn") {
+			this.contentDiv.replaceChildren();
+			Home();
+		}
+		if (id === "menu-btn") {
+			this.contentDiv.replaceChildren();
+			Menu();
+		}
+		if (id === "about-btn") {
+			this.contentDiv.replaceChildren();
+			About();
+		}
+	}
+
+}
+
+const resto = new Restaurant();
+resto.initListeners();
+
+
+
