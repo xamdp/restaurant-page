@@ -4,6 +4,8 @@ import "./styles.css";
 import { Home } from "./content.js"
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
+import { Footer } from "./footer.js";
+import { HeadingLogo } from "./HeadingLogo.js";
 
 // i need to create event listeners here that will listen for clicked buttons.
 
@@ -20,6 +22,12 @@ class Restaurant {
 		this.homeBtn.addEventListener('click', this.loadThisPage);
 		this.menuBtn.addEventListener('click', this.loadThisPage);
 		this.aboutBtn.addEventListener('click', this.loadThisPage);
+	}
+
+	initialPageLoad() {
+		HeadingLogo();
+		Home();
+		Footer();
 	}
 
 
@@ -43,7 +51,7 @@ class Restaurant {
 
 const resto = new Restaurant();
 resto.initListeners();
-Home();
+resto.initialPageLoad();
 
 
 
