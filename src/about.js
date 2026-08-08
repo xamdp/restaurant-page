@@ -8,7 +8,7 @@ function About() {
 	div.setAttribute("id", "about-div")
 	title.textContent = "About"
 	title.setAttribute("class", "heading");
-	p.textContent = "This is the about page of how a beef pares taste like."
+	p.textContent = "Bida tayo! Bida tayo! Nasa bida ang saya!"
 
 	div.append(title, p);
 	contentDiv.append(div);

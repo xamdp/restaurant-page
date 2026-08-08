@@ -8,7 +8,8 @@ function Menu() {
 	const p = document.createElement("p");
 
 	div.setAttribute("id", "menu-div")
-	title.textContent = "Menu"
+	title.textContent = "Featured Menu"
+	title.classList.add("heading")
 	p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aspernatur sed, expedita quae ullam dolorem quas beatae unde iure id alias porro omnis aperiam, molestias recusandae accusantium! Aliquam, quaerat doloremque!"
 
 	div.append(title, p)
