@@ -1,26 +1,75 @@
-body {
-	background-color: saddlebrown;
+@font-face {
+	font-family: "Jellee";
+	src: url('./asset/Jellee-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--logo-text: #E0163D;
+	--text: #231F20;
+	--primary-bg: #FFFFFF;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Jellee", sans-serif;
 }
 
 header {
-	margin-top: 2rem;
+	background-color: var(--logo-text);
+	padding-top: 1rem;
+	width: 100%;
 	display: flex;
+	justify-content: space-between;
+}
+
+.logo-heading {
+	display: flex;
+	width: 500px;
 	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	color: var(--primary-bg);
+	font-size: 2rem;
+	align-self: center;
+}
+
+.resto-img {
+	width: auto;
+	height: 75px;
+}
+
+footer {
+	background-color: var(--logo-text);
+	color: var(--primary-bg);
+	width: 100%;
+	text-align: center;
 }
 
 nav {
 	display: flex;
-	justify-content: space-between;
-	width: 500px;
+	justify-content: flex-end;
+	width: 100%;
+	gap: 30px;
+	padding-right: 5rem;
 }
 
 nav button {
 	padding: 1rem 1.2rem 1rem 1.2rem;
-	font-size: 1.6rem;
-	font-weight: 600;
-	background-color: burlywood;
+	font-size: 1rem;
+	font-family: "Jellee";
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: var(--primary-bg);
 	border: none;
 	border-radius: 7px;
+	background-color: var(---logo-text);
 }
 
 #content {
@@ -28,6 +77,7 @@ nav button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	background-color: (--primary-bg);
 }
 
 #menu-div,
@@ -36,4 +86,9 @@ nav button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.heading {
+	font-weight: 300;
+	font-size: 1rem;
 }
