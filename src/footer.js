@@ -6,7 +6,7 @@ function Footer() {
 
 	p.textContent = "Copyright 2026"
 	footer.append(p);
-	document.body.append(footer);
+	document.querySelector(".container").append(footer);
 
 }
 

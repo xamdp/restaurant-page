@@ -1,13 +1,11 @@
-// index.js
 
 import "./styles.css";
-import { Home } from "./content.js"
+import { Container } from "./container.js";
+import { Home } from "./home.js"
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
 import { HeadingLogo } from "./HeadingLogo.js";
-
-// i need to create event listeners here that will listen for clicked buttons.
 
 class Restaurant {
 	constructor() {
@@ -25,6 +23,7 @@ class Restaurant {
 	}
 
 	initialPageLoad() {
+		Container();
 		HeadingLogo();
 		Home();
 		Footer();
