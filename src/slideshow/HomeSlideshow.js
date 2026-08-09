@@ -3,31 +3,50 @@ import { slides } from "./slides.js";
 import { imageLoader } from "./imageLoader.js";
 
 function HomeSlideshow() {
+	let currentIndex = 0;
+	const slideBoxes = [];
 	const homeDiv = document.querySelector("#home-div");
 
 	const container = document.createElement("div");
-	const imageContainer = document.createElement("div");
-
-	const slideElements = slides.map(s => imageLoader(s.src, s.alt))
-
-	const prevBtn = document.createElement("button");
-	const nextBtn = document.createElement("button");
-
-	const dots = document.createElement("div");
-	const dot1 = document.createElement("span");
-	const dot2 = document.createElement("span");
-	const dot3 = document.createElement("span");
-
-	dots.append(dot1, dot2, dot3);
-
 	container.classList.add("slideshow-container");
+
+	// const slideElements = slides.map(s => imageLoader(s.src, s.alt))
+	slides.forEach(slide => {
+		const slideBox = document.createElement("div")
+		slideBox.classList.add("mySlides", "fade");
+
+		const img = imageLoader(slide.src, slide.alt);
+		slideBox.append(img)
+		container.append(slideBox);
+		slideBoxes.push(slideBox);
+	})
+
+	const prevBtn = document.createElement("a");
+	const nextBtn = document.createElement("a");
 	prevBtn.classList.add("prev")
 	nextBtn.classList.add("next")
-	imageContainer.classList.add("mySlides", "fade");
-	imageContainer.append(...slideElements);
+	prevBtn.textContent = "\u276E"
+	nextBtn.textContent = "\u276F"
 
-	container.append(imageContainer, prevBtn, nextBtn);
-	homeDiv.append(container, dots);
+
+	container.append(prevBtn, nextBtn);
+	homeDiv.append(container);
+
+	function showSlide(i) {
+		slideBoxes.forEach((box, idx) => {
+			box.classList.toggle('active', idx === i)
+		})
+	}
+
+	nextBtn.addEventListener("click", () => {
+		currentIndex = (currentIndex + 1) % slides.length;
+		showSlide(currentIndex);
+	})
+
+	prevBtn.addEventListener("click", () => {
+		currentIndex = (currentIndex - 1) % slides.length;
+		showSlide(currentIndex);
+	})
 
 }
 

@@ -14,8 +14,8 @@ class Restaurant {
 		this.homeBtn = document.querySelector("#home-btn");
 		this.menuBtn = document.querySelector("#menu-btn");
 		this.aboutBtn = document.querySelector("#about-btn");
-	}
 
+	}
 
 	initListeners() {
 		this.homeBtn.addEventListener('click', this.loadThisPage);
