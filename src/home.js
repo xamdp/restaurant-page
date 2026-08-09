@@ -1,5 +1,4 @@
 
-
 function Home() {
 	const contentDiv = document.querySelector("#content");
 	const adjacentHeader = document.querySelector("header");

@@ -2,6 +2,7 @@
 import "./styles.css";
 import { Container } from "./container.js";
 import { Home } from "./home.js"
+import { HomeSlideshow } from "./slideshow/HomeSlideshow.js";
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
@@ -26,6 +27,7 @@ class Restaurant {
 		Container();
 		HeadingLogo();
 		Home();
+		HomeSlideshow();
 		Footer();
 	}
 
@@ -35,6 +37,7 @@ class Restaurant {
 		if (id === "home-btn") {
 			this.contentDiv.replaceChildren();
 			Home();
+			HomeSlideshow();
 		}
 		if (id === "menu-btn") {
 			this.contentDiv.replaceChildren();
