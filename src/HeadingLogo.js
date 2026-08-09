@@ -1,4 +1,4 @@
-import Logo from "./asset/logo.png";
+import Logo from "./asset/bee-svgrepo-com.svg";
 
 function HeadingLogo() {
 	const header = document.querySelector("header");
