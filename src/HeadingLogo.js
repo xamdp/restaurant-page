@@ -10,10 +10,11 @@ function HeadingLogo() {
 	img.src = Logo;
 	img.classList.add("resto-img");
 	p.classList.add("title")
-	p.textContent = "JollyBee";
+	p.textContent = "JollyBae";
 
 	div.append(p, img);
 	header.prepend(div);
+	document.querySelector(".container").append(header);
 }
 
 export { HeadingLogo };
