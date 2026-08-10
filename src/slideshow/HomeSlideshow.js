@@ -10,7 +10,6 @@ function HomeSlideshow() {
 	const container = document.createElement("div");
 	container.classList.add("slideshow-container");
 
-	// const slideElements = slides.map(s => imageLoader(s.src, s.alt))
 	slides.forEach(slide => {
 		const slideBox = document.createElement("div")
 		slideBox.classList.add("mySlides", "fade");
@@ -30,7 +29,10 @@ function HomeSlideshow() {
 
 
 	container.append(prevBtn, nextBtn);
-	homeDiv.append(container);
+	homeDiv.prepend(container);
+
+	const firstChild = document.querySelector(".slideshow-container > :first-child");
+	firstChild.classList.add("active");
 
 	function showSlide(i) {
 		slideBoxes.forEach((box, idx) => {
@@ -44,11 +46,10 @@ function HomeSlideshow() {
 	})
 
 	prevBtn.addEventListener("click", () => {
-		currentIndex = (currentIndex - 1) % slides.length;
+		currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 		showSlide(currentIndex);
 	})
 
 }
-
 
 export { HomeSlideshow };
