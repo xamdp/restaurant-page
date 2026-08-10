@@ -25,17 +25,18 @@ html {
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 5fr 1fr;
+	grid-template-rows: 0.5fr 5fr 1fr;
 	height: 100%;
 	box-sizing: border-box;
 }
 
 header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
 	background-color: var(--logo-text);
 	padding-top: 1rem;
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
 }
 
 .logo-heading {
@@ -57,18 +58,22 @@ header {
 }
 
 footer {
+	display: flex;
+	grid-row: 3/4;
 	background-color: var(--logo-text);
 	color: var(--primary-bg);
 	width: 100%;
-	text-align: center;
+	justify-content: center;
+}
+
+footer p {
+	margin: 0;
+	align-self: center;
 }
 
 nav {
 	display: flex;
-	justify-content: flex-end;
-	width: 100%;
 	gap: 30px;
-	padding-right: 5rem;
 }
 
 nav button {
@@ -114,6 +119,41 @@ nav button {
 	max-width: 700px;
 	position: relative;
 	margin: auto;
+}
+
+.feature-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.title-link-menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.featured {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 30px;
+}
+
+.featured p {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.myBox {
+	width: 176px;
+	height: auto;
+}
+
+.myBox>img {
+	object-fit: cover;
+	object-position: center;
+
 }
 
 .mySlides {

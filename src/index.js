@@ -3,6 +3,7 @@ import "./styles.css";
 import { Container } from "./container.js";
 import { Home } from "./home.js"
 import { HomeSlideshow } from "./slideshow/HomeSlideshow.js";
+import { FeatureSlideshow } from "./slideshow/FeatureSlideshow.js";
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
@@ -28,6 +29,7 @@ class Restaurant {
 		HeadingLogo();
 		Home();
 		HomeSlideshow();
+		FeatureSlideshow();
 		Footer();
 	}
 
