@@ -2,12 +2,12 @@
 import "./styles.css";
 import { Container } from "./container.js";
 import { Home } from "./home.js"
+import { HeadingLogo } from "./HeadingLogo.js";
 import { HomeSlideshow } from "./slideshow/HomeSlideshow.js";
 import { FeatureSlideshow } from "./slideshow/FeatureSlideshow.js";
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
-import { HeadingLogo } from "./HeadingLogo.js";
 
 class Restaurant {
 	constructor() {
@@ -15,6 +15,8 @@ class Restaurant {
 		this.homeBtn = document.querySelector("#home-btn");
 		this.menuBtn = document.querySelector("#menu-btn");
 		this.aboutBtn = document.querySelector("#about-btn");
+
+		this.linkToMenu = document.querySelector("#link-to-menu");
 
 	}
 
@@ -40,6 +42,7 @@ class Restaurant {
 			this.contentDiv.replaceChildren();
 			Home();
 			HomeSlideshow();
+			FeatureSlideshow();
 		}
 		if (id === "menu-btn") {
 			this.contentDiv.replaceChildren();

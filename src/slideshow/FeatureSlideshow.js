@@ -1,8 +1,9 @@
 import { featureSlides } from "./slides.js";
 import { imageLoader } from "./imageLoader.js";
+import { Menu } from "../menu.js";
 
 function FeatureSlideshow() {
-	let currentIndex = 0;
+	// let currentIndex = 0;
 	const slideBoxes = [];
 
 	const homeDiv = document.querySelector("#home-div")
@@ -19,6 +20,8 @@ function FeatureSlideshow() {
 
 	title.textContent = "Featured Menu"
 	linkToMenu.textContent = "View All"
+	linkToMenu.href = "#"
+	linkToMenu.setAttribute("id", "link-to-menu")
 	titleLinkToMenuDiv.classList.add("title-link-menu")
 	titleLinkToMenuDiv.append(title, linkToMenu);
 
@@ -33,6 +36,12 @@ function FeatureSlideshow() {
 		featured.append(slideBox);
 		slideBoxes.push(slideBox);
 	})
+
+	linkToMenu.addEventListener('click', (event) => {
+		event.preventDefault();
+		document.querySelector("#content").replaceChildren();
+		Menu();
+	});
 
 	featureContainer.prepend(titleLinkToMenuDiv, featured);
 	homeDiv.append(featureContainer);
