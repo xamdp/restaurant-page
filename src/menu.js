@@ -1,19 +1,20 @@
 
-// i should create cards here, that displays menus available.
-
 function Menu() {
 	const contentDiv = document.querySelector("#content");
-	const div = document.createElement("div");
+	const menuDiv = document.createElement("div");
+	const titleContainer = document.createElement("div");
 	const title = document.createElement("h2");
 	const p = document.createElement("p");
 
-	div.setAttribute("id", "menu-div")
-	title.textContent = "Featured Menu"
+	titleContainer.classList.add("title-container")
+	menuDiv.setAttribute("id", "menu-div")
+	title.textContent = "Menu"
 	title.classList.add("heading")
-	p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aspernatur sed, expedita quae ullam dolorem quas beatae unde iure id alias porro omnis aperiam, molestias recusandae accusantium! Aliquam, quaerat doloremque!"
+	p.textContent = "Menu"
 
-	div.append(title, p)
-	contentDiv.appendChild(div);
+	titleContainer.append(p, title);
+	menuDiv.append(titleContainer);
+	contentDiv.appendChild(menuDiv);
 }
 
 export { Menu };
