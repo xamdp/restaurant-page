@@ -31,33 +31,38 @@ function Menu() {
 
 
 
-	const navBtns = document.createElement("div");
-	const prevBtn = document.createElement("span");  // left
-	const nextBtn = document.createElement("span"); // right
+	const prevBtn = document.createElement("button");  // left
+	const nextBtn = document.createElement("button"); // right
 
+	prevBtn.type = "button"
+	nextBtn.type = "button"
 	carouselInner.classList.add("carousel-inner")
-	navBtns.classList.add("nav-btns")
+	// navBtns.classList.add("nav-btns")
 	prevBtn.classList.add("left")
 	nextBtn.classList.add("right")
 	prevBtn.textContent = "\u276E"
 	nextBtn.textContent = "\u276F"
 
-	navBtns.append(prevBtn, nextBtn)
-	carouselInner.append(navBtns);
-	carouselContainer.append(carouselInner)
-
+	// navBtns.append(prevBtn, nextBtn)
+	carouselContainer.append(carouselInner, prevBtn, nextBtn)
 
 	titleContainer.append(p, title);
 	menuDiv.append(titleContainer, carouselContainer);
 	contentDiv.appendChild(menuDiv);
 
-	const right = document.querySelector(".right")
-	const left = document.querySelector(".left")
-	const track = document.querySelector(".carousel-inner")
-	const navs = document.querySelector(".nav-btns")
 
-	const carouselWidth = document.querySelector(".carousel-container").offsetWidth;
-	// navs.style.width = carouselWidth + 'px';
+	document.querySelectorAll('.carousel-container').forEach((carousel) => {
+		const inner = carousel.querySelector(".carousel-inner")
+		const slides = inner.children;
+
+		carousel.querySelector(".left").addEventListener('click', () => {
+			inner.prepend(slides[slides.length - 1]);
+		})
+
+		carousel.querySelector(".right").addEventListener('click', () => {
+			inner.append(slides[0]);
+		})
+	})
 
 }
 

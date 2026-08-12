@@ -212,11 +212,6 @@ nav button {
 	transition: backround-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-	/* background-color: #717171; */
-}
-
 .fade {
 	animation-name: fade;
 	animation-duration: 1.5s
@@ -255,24 +250,23 @@ nav button {
 
 .carousel-container {
 	margin-top: 2rem;
-	overflow: hidden;
 	width: 100%;
 	display: flex;
-	justify-content: center;
-
+	position: relative;
+	margin: 0 auto;
 }
 
-.carousel-inner {
-	width: 80%;
+.carousel-container .carousel-inner {
+	width: 100%;
 	position: relative;
 	display: flex;
-	gap: 30px;
 	justify-content: center;
+	transform: 2s;
 }
 
-.text-box {
+.carousel-container .text-box {
+	flex-shrink: 0;
 	padding: 12px 16px;
-	/* border: 1px solid black; */
 }
 
 .text-box p {
@@ -295,22 +289,12 @@ nav button {
 .left,
 .right {
 	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
+	/* position: relative; */
+	/* top: 50%; */
+	/* width: auto; */
 	padding: 16px;
 	color: black;
 	font-weight: bold;
 	font-size: 18px;
 	border-radius: 0 3px 3px 0;
-	user-select: none;
-	pointer-events: auto;
-}
-
-.nav-btns .right {
-	right: -30px;
-}
-
-.nav-btns .left {
-	left: -30px;
 }
