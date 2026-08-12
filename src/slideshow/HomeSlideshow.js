@@ -20,6 +20,7 @@ function HomeSlideshow() {
 		slideBoxes.push(slideBox);
 	})
 
+	// idk why i used a tags here
 	const prevBtn = document.createElement("a");
 	const nextBtn = document.createElement("a");
 	prevBtn.classList.add("prev")
