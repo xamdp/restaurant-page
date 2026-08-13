@@ -31,20 +31,21 @@ function Menu() {
 
 
 
+	const navBtns = document.createElement("div")
 	const prevBtn = document.createElement("button");  // left
 	const nextBtn = document.createElement("button"); // right
 
 	prevBtn.type = "button"
 	nextBtn.type = "button"
 	carouselInner.classList.add("carousel-inner")
-	// navBtns.classList.add("nav-btns")
+	navBtns.classList.add("nav-btns")
 	prevBtn.classList.add("left")
 	nextBtn.classList.add("right")
 	prevBtn.textContent = "\u276E"
 	nextBtn.textContent = "\u276F"
 
-	// navBtns.append(prevBtn, nextBtn)
-	carouselContainer.append(carouselInner, prevBtn, nextBtn)
+	navBtns.append(prevBtn, nextBtn)
+	carouselContainer.append(carouselInner, navBtns)
 
 	titleContainer.append(p, title);
 	menuDiv.append(titleContainer, carouselContainer);
@@ -55,11 +56,11 @@ function Menu() {
 		const inner = carousel.querySelector(".carousel-inner")
 		const slides = inner.children;
 
-		carousel.querySelector(".left").addEventListener('click', () => {
+		carousel.querySelector(".nav-btns .left").addEventListener('click', () => {
 			inner.prepend(slides[slides.length - 1]);
 		})
 
-		carousel.querySelector(".right").addEventListener('click', () => {
+		carousel.querySelector(".nav-btns .right").addEventListener('click', () => {
 			inner.append(slides[0]);
 		})
 	})
