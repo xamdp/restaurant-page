@@ -103,6 +103,10 @@ nav button {
 	justify-content: center;
 }
 
+#menu-div {
+	gap: 2rem;
+}
+
 .heading-text-container {
 	display: none;
 }
@@ -201,6 +205,7 @@ nav button {
 	border-radius: 3px 0 0 3px;
 }
 
+/* will add dot in HomeSlideshow soon */
 .dot {
 	cursor: pointer;
 	height: 15px;
@@ -249,19 +254,20 @@ nav button {
 }
 
 .carousel-container {
-	margin-top: 2rem;
-	width: 100%;
+	width: 80%;
 	display: flex;
 	position: relative;
-	margin: 0 auto;
+	margin: 10px auto;
+	min-height: 60px;
 }
 
 .carousel-container .carousel-inner {
+	overflow: hidden;
 	width: 100%;
-	position: relative;
 	display: flex;
 	justify-content: center;
 	transform: 2s;
+	padding: 0 30px;
 }
 
 .carousel-container .text-box {
@@ -277,24 +283,70 @@ nav button {
 .nav-btns {
 	display: flex;
 	position: absolute;
-	top: -8px;
-	left: 0;
-	width: 100%;
+	align-items: center;
 	justify-content: space-between;
+	padding: 0 30px;
+	left: 0;
+	right: 0;
 	pointer-events: none;
-	display: flex;
 }
 
+.nav-btns button {
+	pointer-events: auto;
+}
 
 .left,
 .right {
 	cursor: pointer;
-	/* position: relative; */
-	/* top: 50%; */
-	/* width: auto; */
+	width: auto;
 	padding: 16px;
 	color: black;
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.left {
+	border-radius: 3px 0 0 3px;
+}
+
+.right {
 	border-radius: 0 3px 3px 0;
+}
+
+.nav-btns button {
+	background: rgba(222, 222, 222, 0.6);
+}
+
+.nav-btns button:hover {
+	background: rgba(222, 222, 222, 0.2);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* i just saw this from a git repo and honestly i don't know what i am doing */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.carousel-container {
+		width: 85%;
+	}
 }
