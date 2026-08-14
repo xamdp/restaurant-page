@@ -25,4 +25,5 @@ export const meals = [
 	{ img: noMeal, text: "Beef Tapa Solo" },
 	{ img: noMeal, text: "Beef Tapa w/ Drink" },
 	{ img: noMeal, text: "Corned Beef Solo" },
+	{ img: noMeal, text: "Corned Beef w/ Drink" },
 ]

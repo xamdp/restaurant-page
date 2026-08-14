@@ -5,7 +5,7 @@ function ViewMenu() {
 	const menuDiv = document.querySelector("#menu-div")
 
 	const categoryTitleDiv = document.createElement("div")
-	categoryTitleDiv.className = "caterory-title-div"
+	categoryTitleDiv.className = "category-title-div"
 
 	const categoryHeading = document.createElement("h2");
 	categoryHeading.textContent = "Breakfast"
@@ -16,6 +16,9 @@ function ViewMenu() {
 	wrapper.className = "wrapper"
 	wrapper.append(categoryTitleDiv)
 
+	const gridWrapper = document.createElement("div")
+	gridWrapper.className = "grid-wrapper"
+
 	const cardsWrapper = document.createElement("div")
 	cardsWrapper.className = "cards-wrapper"
 
@@ -24,7 +27,8 @@ function ViewMenu() {
 		cardsWrapper.append(card)
 	})
 
-	wrapper.append(cardsWrapper)
+	gridWrapper.append(cardsWrapper)
+	wrapper.append(gridWrapper)
 	menuDiv.append(wrapper)
 }
 
