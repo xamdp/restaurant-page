@@ -5,6 +5,7 @@ import { Home } from "./home.js"
 import { HeadingLogo } from "./HeadingLogo.js";
 import { HomeSlideshow } from "./slideshow/HomeSlideshow.js";
 import { FeatureSlideshow } from "./slideshow/FeatureSlideshow.js";
+import { ViewMenu } from "./category/ViewMenu.js";
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
@@ -35,7 +36,6 @@ class Restaurant {
 		Footer();
 	}
 
-
 	loadThisPage = (event) => {
 		let id = event.target.id;
 		if (id === "home-btn") {
@@ -47,6 +47,7 @@ class Restaurant {
 		if (id === "menu-btn") {
 			this.contentDiv.replaceChildren();
 			Menu();
+			ViewMenu();
 		}
 		if (id === "about-btn") {
 			this.contentDiv.replaceChildren();

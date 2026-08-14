@@ -1,3 +1,4 @@
+import noMeal from "../asset/img/featured/no_image.svg"
 
 export const categories = [
 	{ text: "Breakfast" },
@@ -13,4 +14,15 @@ export const categories = [
 	{ text: "Chicken Fillet" },
 	{ text: "Fries" },
 	{ text: "For Teens" },
+]
+
+export const meals = [
+	{ img: noMeal, text: "1-pc. Breakfast Happy Chicken" },
+	{ img: noMeal, text: "1-pc. Breakfast Happy Chicken w/ Drink" },
+	{ img: noMeal, text: "1-pc. Breakfast Happy Chicken Spicy Solo" },
+	{ img: noMeal, text: "Longganisa Solo" },
+	{ img: noMeal, text: "Longganisa w/ Drink" },
+	{ img: noMeal, text: "Beef Tapa Solo" },
+	{ img: noMeal, text: "Beef Tapa w/ Drink" },
+	{ img: noMeal, text: "Corned Beef Solo" },
 ]

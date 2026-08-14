@@ -287,6 +287,7 @@ nav button {
 	justify-content: space-between;
 	padding: 0 30px;
 	left: 0;
+	/* left and right acts as width 100% */
 	right: 0;
 	pointer-events: none;
 }
@@ -321,6 +322,19 @@ nav button {
 	background: rgba(222, 222, 222, 0.2);
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.cards-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.carousel-container {
@@ -329,6 +343,7 @@ nav button {
 }
 
 /* i just saw this from a git repo and honestly i don't know what i am doing */
+/* maybe i should also add the .carousel-inner and .nav-btns  */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
