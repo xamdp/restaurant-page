@@ -41,9 +41,15 @@ header {
 
 .logo-heading {
 	display: flex;
-	width: 500px;
+	width: fit-content;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
+}
+
+.title,
+.resto-img {
+	pointer-events: none;
 }
 
 .title {
@@ -354,10 +360,13 @@ nav #about-btn {
 	grid-row: 2/5;
 }
 
+/* i don't need to use these, subgrid is enough */
+/* grid-template-columns: repeat(3, 1fr); */
+/* grid-template-rows: repeat(3, 1fr); */
 .cards-wrapper {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: subgrid;
+	grid-template-rows: subgrid;
 	grid-column: 1/4;
 	grid-row: 1/4;
 	gap: 3rem;

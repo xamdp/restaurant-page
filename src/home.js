@@ -2,7 +2,7 @@
 function Home() {
 	const contentDiv = document.querySelector("#content");
 	const adjacentHeader = document.querySelector("header");
-	const div = document.createElement("div")
+	const div = document.createElement("div") // #home-div
 	const title = document.createElement("h2");
 	const p = document.createElement("p");
 	const headingTextContainer = document.createElement("div");

@@ -22,10 +22,15 @@ function ViewMenu() {
 	const cardsWrapper = document.createElement("div")
 	cardsWrapper.className = "cards-wrapper"
 
+
 	meals.forEach((meal) => {
 		const card = CardLoader(meal.img, meal.text)
 		cardsWrapper.append(card)
 	})
+
+	// gridWrapper.style.gridTemplateColumns = `repeat(${meals.length}, 250px)`
+	// gridWrapper.style.gridTemplateRows = `repeat(3, 1fr)`
+
 
 	gridWrapper.append(cardsWrapper)
 	wrapper.append(gridWrapper)
