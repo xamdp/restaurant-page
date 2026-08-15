@@ -1,6 +1,7 @@
 import { featureSlides } from "./slides.js";
 import { imageLoader } from "./imageLoader.js";
 import { Menu } from "../menu.js";
+import { ViewMenu } from "../category/ViewMenu.js";
 
 function FeatureSlideshow() {
 	// let currentIndex = 0;
@@ -40,7 +41,8 @@ function FeatureSlideshow() {
 	linkToMenu.addEventListener('click', (event) => {
 		event.preventDefault();
 		document.querySelector("#content").replaceChildren();
-		Menu();
+		Menu()
+		ViewMenu()
 	});
 
 	featureContainer.prepend(titleLinkToMenuDiv, featured);
