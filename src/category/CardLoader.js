@@ -13,7 +13,19 @@ function CardLoader(src, text) {
 	const mealName = document.createElement("p");
 	mealName.textContent = text
 
-	cardDiv.append(imgWrapper, mealName)
+	const viewBtn = document.createElement('button')
+	viewBtn.className = "view-btn"
+	viewBtn.textContent = "View Meal"
+
+	const orderBtn = document.createElement('button')
+	orderBtn.className = "order-btn"
+	orderBtn.textContent = "Order Now"
+
+	const btnContainer = document.createElement("div")
+	btnContainer.className = "meal-btns-container"
+	btnContainer.append(viewBtn, orderBtn)
+
+	cardDiv.append(imgWrapper, mealName, btnContainer)
 
 	return cardDiv;
 }

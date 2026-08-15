@@ -378,10 +378,11 @@ nav #about-btn {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	padding: 7px;
 }
 
 .card-div p {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 }
 
@@ -394,6 +395,33 @@ nav #about-btn {
 .img-wrapper img {
 	width: auto;
 	height: 200px;
+}
+
+.meal-btns-container {
+	display: flex;
+	gap: 20px;
+}
+
+.view-btn,
+.order-btn {
+	padding: 12px 15px 12px 15px;
+	border-radius: 25px;
+	font-family: "Quicksand";
+	font-size: 20px;
+	font-weight: bold;
+	flex-shrink: 0;
+}
+
+.view-btn {
+	background-color: var(--primary-bg);
+	color: var(--text);
+	border: 1px solid gray;
+}
+
+.order-btn {
+	background-color: var(--logo-text);
+	color: var(--primary-bg);
+	border: none;
 }
 
 
