@@ -30,7 +30,7 @@ html {
 	box-sizing: border-box;
 }
 
-header {
+.jolly-header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
@@ -379,6 +379,7 @@ nav #about-btn {
 	align-items: center;
 	text-align: center;
 	padding: 7px;
+	flex: 1;
 }
 
 .card-div p {
@@ -400,6 +401,7 @@ nav #about-btn {
 .meal-btns-container {
 	display: flex;
 	gap: 20px;
+	flex-shrink: 0;
 }
 
 .view-btn,
@@ -409,7 +411,6 @@ nav #about-btn {
 	font-family: "Quicksand";
 	font-size: 20px;
 	font-weight: bold;
-	flex-shrink: 0;
 }
 
 .view-btn {
@@ -422,6 +423,28 @@ nav #about-btn {
 	background-color: var(--logo-text);
 	color: var(--primary-bg);
 	border: none;
+}
+
+.store-header {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	padding-left: 2rem;
+}
+
+.store-heading {
+	margin: 0;
+	font-size: 2.5rem;
+	padding: 30px 0px 30px 0px;
+	border-bottom: 1px solid #e3e3e3;
+	text-align: start;
+}
+
+.info-container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
 }
 
 

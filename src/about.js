@@ -1,17 +1,20 @@
 
 function About() {
 	const contentDiv = document.querySelector("#content");
-	const div = document.createElement("div")
-	const title = document.createElement("h2");
-	const p = document.createElement("p");
+	const aboutDiv = document.createElement("div")
+	aboutDiv.setAttribute("id", "about-div")
 
-	div.setAttribute("id", "about-div")
-	title.textContent = "About"
-	title.setAttribute("class", "heading");
-	p.textContent = "Bida tayo! Bida tayo! Nasa bida ang saya!"
 
-	div.append(title, p);
-	contentDiv.append(div);
+	const storeHeader = document.createElement("header");
+	storeHeader.className = "store-header"
+
+	const storeLocation = document.createElement("h2")
+	storeLocation.textContent = "JollyBae Restaurant Near Me - Manila Ermita"
+	storeLocation.className = "store-heading"
+
+	storeHeader.append(storeLocation)
+	aboutDiv.append(storeHeader)
+	contentDiv.append(aboutDiv)
 }
 
 export { About };

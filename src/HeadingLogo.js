@@ -5,7 +5,7 @@ import { HomeSlideshow } from "./slideshow/HomeSlideshow.js";
 
 function HeadingLogo() {
 	const contentDiv = document.querySelector("#content")
-	const header = document.querySelector("header");
+	const header = document.querySelector(".jolly-header");
 	const logoheadingContainer = document.createElement("a");
 	const img = document.createElement("img");
 	const p = document.createElement("p");

@@ -9,6 +9,7 @@ import { ViewMenu } from "./category/ViewMenu.js";
 import { Menu } from "./menu.js";
 import { About } from "./about.js";
 import { Footer } from "./footer.js";
+import { StoreInfo } from "./store/StoreInfo.js";
 
 class Restaurant {
 	constructor() {
@@ -52,6 +53,7 @@ class Restaurant {
 		if (id === "about-btn") {
 			this.contentDiv.replaceChildren();
 			About();
+			StoreInfo();
 		}
 	}
 
