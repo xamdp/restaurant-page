@@ -1,0 +1,480 @@
+@font-face {
+	font-family: "Jellee";
+	src: url('./asset/Jellee-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--logo-text: #E0163D;
+	--text: #231F20;
+	--primary-bg: #FFFFFF;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 5fr 1fr;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.jolly-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	background-color: var(--logo-text);
+	padding-top: 1rem;
+	width: 100%;
+}
+
+.logo-heading {
+	display: flex;
+	width: fit-content;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.title,
+.resto-img {
+	pointer-events: none;
+}
+
+.title {
+	color: var(--primary-bg);
+	font-size: 2rem;
+	align-self: center;
+}
+
+.resto-img {
+	width: auto;
+	height: 75px;
+}
+
+footer {
+	display: flex;
+	grid-row: 4;
+	background-color: var(--logo-text);
+	color: var(--primary-bg);
+	width: 100%;
+	height: 100px;
+	justify-content: center;
+}
+
+footer p {
+	margin: 0;
+	align-self: center;
+}
+
+nav {
+	display: flex;
+	gap: 30px;
+}
+
+nav button {
+	padding: 1rem 1.2rem 1rem 1.2rem;
+	font-size: 1rem;
+	font-family: "Quicksand";
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: var(--primary-bg);
+	border: none;
+	border-radius: 7px;
+	background-color: var(---logo-text);
+}
+
+nav #home-btn,
+nav #menu-btn,
+nav #about-btn {
+	cursor: pointer;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	background-color: (--primary-bg);
+}
+
+#menu-div,
+#home-div,
+#about-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#menu-div {
+	gap: 2rem;
+}
+
+.heading-text-container {
+	display: none;
+}
+
+.heading {
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.text {
+	font-weight: 700;
+}
+
+.slideshow-container {
+	width: 800px;
+	position: relative;
+	margin: auto;
+}
+
+.feature-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.title-link-menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+#link-to-menu {
+	align-self: center;
+	text-decoration: none;
+	color: var(--logo-text);
+	font-weight: 600;
+}
+
+.featured {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 30px;
+}
+
+.featured p {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.myBox {
+	width: 176px;
+	height: auto;
+}
+
+.myBox>img {
+	object-fit: cover;
+	object-position: center;
+
+}
+
+.mySlides {
+	display: none;
+}
+
+.mySlides>img {
+	width: 100%;
+	height: 456px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.mySlides.active {
+	display: block;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* will add dot in HomeSlideshow soon */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: backround-color 0.6s ease;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+.title-container {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.title-container p {
+	margin: 0;
+	color: var(--logo-text);
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.title-container h2 {
+	margin: 0;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.carousel-container {
+	width: 80%;
+	display: flex;
+	position: relative;
+	margin: 10px auto;
+	min-height: 60px;
+}
+
+.carousel-container .carousel-inner {
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	transform: 2s;
+	padding: 0 30px;
+}
+
+.carousel-container .text-box {
+	flex-shrink: 0;
+	padding: 12px 16px;
+}
+
+.text-box p {
+	margin: 0;
+	font-weight: 600;
+}
+
+.nav-btns {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px;
+	left: 0;
+	/* left and right acts as width 100% */
+	right: 0;
+	pointer-events: none;
+}
+
+.nav-btns button {
+	pointer-events: auto;
+}
+
+.left,
+.right {
+	cursor: pointer;
+	width: auto;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.left {
+	border-radius: 3px 0 0 3px;
+}
+
+.right {
+	border-radius: 0 3px 3px 0;
+}
+
+.nav-btns button {
+	background: rgba(222, 222, 222, 0.6);
+}
+
+.nav-btns button:hover {
+	background: rgba(222, 222, 222, 0.2);
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px 1fr 1fr 1fr;
+}
+
+.category-title-div {
+	display: grid;
+	grid-column: 3/4;
+	grid-row: 1;
+}
+
+.category-heading {
+	display: flex;
+	justify-self: center;
+	align-self: center;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column: 2/5;
+	grid-row: 2/5;
+}
+
+/* i don't need to use these, subgrid is enough */
+/* grid-template-columns: repeat(3, 1fr); */
+/* grid-template-rows: repeat(3, 1fr); */
+.cards-wrapper {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-template-rows: subgrid;
+	grid-column: 1/4;
+	grid-row: 1/4;
+	gap: 3rem;
+}
+
+.card-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 7px;
+	flex: 1;
+}
+
+.card-div p {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.img-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-wrapper img {
+	width: auto;
+	height: 200px;
+}
+
+.meal-btns-container {
+	display: flex;
+	gap: 20px;
+	flex-shrink: 0;
+}
+
+.view-btn,
+.order-btn {
+	padding: 12px 15px 12px 15px;
+	border-radius: 25px;
+	font-family: "Quicksand";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.view-btn {
+	background-color: var(--primary-bg);
+	color: var(--text);
+	border: 1px solid gray;
+}
+
+.order-btn {
+	background-color: var(--logo-text);
+	color: var(--primary-bg);
+	border: none;
+}
+
+.store-header {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	padding-left: 2rem;
+}
+
+.store-heading {
+	margin: 0;
+	font-size: 2.5rem;
+	padding: 30px 0px 30px 0px;
+	border-bottom: 1px solid #e3e3e3;
+	text-align: start;
+}
+
+.info-container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* i just saw this from a git repo and honestly i don't know what i am doing */
+/* maybe i should also add the .carousel-inner and .nav-btns  */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.carousel-container {
+		width: 80%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.carousel-container {
+		width: 85%;
+	}
+}
