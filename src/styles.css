@@ -76,6 +76,7 @@ footer {
 footer p {
 	margin: 0;
 	align-self: center;
+	font-weight: 500;
 }
 
 nav {
@@ -427,9 +428,8 @@ nav #about-btn {
 
 .store-header {
 	display: flex;
-	margin: 0 auto;
-	justify-content: center;
-	padding-left: 2rem;
+	justify-content: flex-start;
+	padding-left: 4rem;
 }
 
 .store-heading {
@@ -437,15 +437,147 @@ nav #about-btn {
 	font-size: 2.5rem;
 	padding: 30px 0px 30px 0px;
 	border-bottom: 1px solid #e3e3e3;
-	text-align: start;
 }
 
 .info-container {
+	margin-left: 4rem;
+	margin-top: 2rem;
+	width: 650px;
 	display: flex;
-	justify-content: center;
-	text-align: center;
+	justify-content: flex-start;
 	flex-direction: column;
 }
+
+.tags {
+	display: flex;
+	gap: 7px;
+}
+
+.tags p:nth-child(4) {
+	background-color: #E2FCD7;
+	color: #0A5F2E;
+}
+
+.tags p {
+	background-color: #FFF0E5;
+	border-radius: 20px;
+	padding: 9px 18px 9px 18px;
+	color: #A45418;
+	font-weight: 500;
+}
+
+.store-btns {
+	display: flex;
+	padding: 10px 0px 20px 0px;
+	gap: 15px;
+}
+
+.store-btns button {
+	padding: 15px 25px 15px 25px;
+	border-radius: 25px;
+	font-size: 1.1rem;
+	font-family: "Quicksand";
+	font-weight: 500;
+}
+
+.directions-btn {
+	color: var(--text);
+	background-color: var(--primary-bg);
+	border: 1px solid #e3e3e3;
+}
+
+.view-menu-btn {
+	color: var(--primary-bg);
+	background-color: var(--logo-text);
+	border: none;
+
+}
+
+.view-menu-btn:hover {
+	background-color: #AE0016;
+}
+
+.contact-store {
+	display: flex;
+	flex-direction: column;
+}
+
+.telephone {
+	display: flex;
+	gap: 10px;
+}
+
+.telephone img {
+	height: 25px !important;
+	width: 25px !important
+}
+
+.telephone p {
+	color: var(--logo-text);
+	margin: 0;
+	font-weight: 500;
+	align-self: center;
+}
+
+.mail {
+	display: flex;
+	gap: 10px;
+}
+
+.mail img {
+	height: 25px !important;
+	width: 25px !important
+}
+
+.mail p {
+	margin: 0;
+	color: var(--logo-text);
+	font-weight: 500;
+	align-self: center;
+}
+
+.location-store {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+.location-store p {
+	font-weight: 500;
+}
+
+.opening-hours-store {
+	display: flex;
+}
+
+.open-heading {
+	display: flex;
+	gap: 25px;
+}
+
+.open-sign {
+	background-color: #E2FCD7;
+	color: #0A5F2E;
+	border-radius: 20px;
+	padding: 9px 18px 9px 18px;
+	font-weight: 700;
+}
+
+.sched {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.day-sched {
+	display: flex;
+	justify-content: space-between;
+}
+
+.day-sched p {
+	font-weight: 500;
+}
+
 
 
 /* Extra small devices (phones, 600px and down) */
