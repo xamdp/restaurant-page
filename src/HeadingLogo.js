@@ -18,7 +18,7 @@ function HeadingLogo() {
 
 	logoheadingContainer.append(p, img);
 	header.prepend(logoheadingContainer);
-	document.querySelector(".container").append(header);
+	document.querySelector(".container").prepend(header);
 
 	logoheadingContainer.addEventListener('click', () => {
 		contentDiv.replaceChildren()

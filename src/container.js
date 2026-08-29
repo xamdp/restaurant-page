@@ -1,8 +1,13 @@
 
 function Container() {
-	const div = document.createElement("div");
-	div.classList.add("container")
-	document.body.append(div);
+	const header = document.querySelector(".jolly-header")
+	const wrapper = document.querySelector(".content-footer-wrapper")
+	const container = document.createElement("div");
+	container.className = "container"
+
+	container.append(wrapper)
+	document.body.append(container);
+
 }
 
 export { Container };

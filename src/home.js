@@ -1,7 +1,7 @@
 
 function Home() {
 	const contentDiv = document.querySelector("#content");
-	const adjacentHeader = document.querySelector("header");
+	// const adjacentHeader = document.querySelector("header");
 	const div = document.createElement("div") // #home-div
 	const title = document.createElement("h2");
 	const p = document.createElement("p");
@@ -17,7 +17,9 @@ function Home() {
 	headingTextContainer.append(title, p);
 	div.append(headingTextContainer);
 	contentDiv.append(div);
-	adjacentHeader.insertAdjacentElement("afterend", contentDiv); // inserts the #content div, after the header tag
+
+	document.querySelector(".content-footer-wrapper").prepend(contentDiv)
+	// adjacentHeader.insertAdjacentElement("afterend", contentDiv); // inserts the #content div, after the header tag
 }
 
 export { Home };
